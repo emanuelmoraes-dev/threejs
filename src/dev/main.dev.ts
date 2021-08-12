@@ -6,6 +6,8 @@ import { createX3, setupDefaultX3Config } from './x3'
 import scene02X3Config from './scenes-x3-config/scene-02-x3-config'
 
 const setup = createSetup(domScene)
+setup.controls.enabled = true
+
 const scene02 = createScene(setup)
 
 const x3 = createX3(setup, scene02.scene)

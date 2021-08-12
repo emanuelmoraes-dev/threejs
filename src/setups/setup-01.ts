@@ -1,5 +1,6 @@
 import ISetup from './i-setup'
 import { PerspectiveCamera, WebGLRenderer } from 'three'
+import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls'
 
 export default function createSetup01 (
     domScene: HTMLElement,
@@ -23,8 +24,13 @@ export default function createSetup01 (
     camera.position.y = 4.4
     camera.position.z = 8.5
 
+    const controls = new OrbitControls(camera, renderer.domElement)
+    controls.enabled = false
+    controls.update()
+
     return {
         renderer,
-        camera
+        camera,
+        controls
     }
 }

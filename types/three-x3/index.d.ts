@@ -1,11 +1,11 @@
 declare module 'three-x3' {
-    type THREEx3 = {
+    export type THREEx3Instance = {
         tick (): void
         fps (callback: () => void): void
         add (element: unknown, options?: Record<string, unknown>): void
     }
 
-    type THREEx3Args = {
+    export type THREEx3Args = {
         THREE: unknown,
         OrbitControls: unknown,
         camera: unknown,
@@ -13,11 +13,10 @@ declare module 'three-x3' {
         scene: unknown
     }
 
-    type THREEx3Type = {
-        new (args: THREEx3Args): THREEx3
+    export type THREEx3Type = {
+        new (args: THREEx3Args): THREEx3Instance
     }
 
     const THREEx3Class: THREEx3Type
-
     export default THREEx3Class
 }

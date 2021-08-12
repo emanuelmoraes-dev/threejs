@@ -38,7 +38,6 @@
     "lodash": "^4.17.21",
     "three": "^0.131.3"
   },
-  "main": "webpack.config.dev.js",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/emanuelmoraes-dev/threejs.git"
